@@ -1,5 +1,5 @@
 # NewcastleCSC3232
-##Rude
+##Rule
 
 Eate Blue to Get score
 
