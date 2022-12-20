@@ -8,6 +8,8 @@ TagManager:
   - player
   - Ground
   - Buffer
+  - bullet
+  - Low
   layers:
   - Default
   - TransparentFX

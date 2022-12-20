@@ -28,4 +28,9 @@ public class PlayerState : MonoBehaviour
     {
         score += value;
     }
+
+    public string GetScore()
+    {
+        return score.ToString();
+    }
 }

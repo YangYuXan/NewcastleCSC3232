@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Enermy\State\PatrolState.cs" />
     <Compile Include="Assets\SGOAP\Examples\WoodCutter\Scripts\TreeObject.cs" />
+    <Compile Include="Assets\Launch.cs" />
     <Compile Include="Assets\SGOAP\Examples\Combat\Scripts\Actions\RunAround.cs" />
     <Compile Include="Assets\SGOAP\Examples\Combat\Scripts\Actions\Throw.cs" />
     <Compile Include="Assets\SGOAP\Scripts\Core\Effect.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="Assets\SGOAP\Examples\Combat\Scripts\AnimationMessages.cs" />
     <Compile Include="Assets\SGOAP\Examples\Combat\Scripts\Components\Grenade.cs" />
     <Compile Include="Assets\SGOAP\Examples\Combat\Scripts\AttackAnimationBehaviour.cs" />
+    <Compile Include="Assets\VisionScan.cs" />
     <Compile Include="Assets\SGOAP\Scripts\Systems\CharacterStatusSystem\RendererViewModifier.cs" />
     <Compile Include="Assets\SGOAP\Scripts\Basic\WorldStateMonitor.cs" />
     <Compile Include="Assets\SGOAP\Scripts\Core\Extensions\TransformExtensions.cs" />
@@ -96,6 +98,7 @@
     <Compile Include="Assets\SGOAP\Examples\Combat\CombatAgentSensor.cs" />
     <Compile Include="Assets\SGOAP\Scripts\Basic\SimulatorDataProvider.cs" />
     <Compile Include="Assets\SGOAP\Examples\Combat\Scripts\AttackSequenceBehaviour.cs" />
+    <Compile Include="Assets\AI_Player\I_State.cs" />
     <Compile Include="Assets\SGOAP\Examples\WoodCutter\Scripts\WoodCutter.cs" />
     <Compile Include="Assets\SGOAP\Scripts\Systems\Sensors\FovTargetSensor.cs" />
     <Compile Include="Assets\SGOAP\Examples\Combat\Scripts\Actions\Dash.cs" />
@@ -114,6 +117,7 @@
     <Compile Include="Assets\SGOAP\Scripts\Common\AudioClipActionHandler.cs" />
     <Compile Include="Assets\SGOAP\Examples\Combat\Scripts\LookAtCamera.cs" />
     <Compile Include="Assets\SGOAP\Examples\Combat\Scripts\Actions\Attack.cs" />
+    <Compile Include="Assets\Bullet.cs" />
     <Compile Include="Assets\SGOAP\Scripts\Core\Models\StringReference.cs" />
     <Compile Include="Assets\SGOAP\Scripts\Common\Actions\LogAction.cs" />
     <Compile Include="Assets\SGOAP\Scripts\Core\EffectAttribute.cs" />
@@ -159,6 +163,7 @@
     <Compile Include="Assets\SGOAP\Scripts\Common\Animation\SetAnimatorPropertyInt.cs" />
     <Compile Include="Assets\SGOAP\Scripts\Basic\Zone.cs" />
     <Compile Include="Assets\SGOAP\Scripts\Systems\Sensors\DirectTargetSensor.cs" />
+    <Compile Include="Assets\AI_Player\FSM.cs" />
     <Compile Include="Assets\SGOAP\Scripts\Core\Evaluators\CostEvaluator.cs" />
     <Compile Include="Assets\PlayerState.cs" />
     <Compile Include="Assets\SGOAP\Scripts\Core\Agent.cs" />
@@ -175,6 +180,7 @@
     <Compile Include="Assets\SGOAP\Shared\ThirdParty\KdTree.cs" />
     <Compile Include="Assets\SGOAP\Examples\Combat\Scripts\HitTarget.cs" />
     <Compile Include="Assets\SGOAP\Scripts\Common\Properties\IntProperty.cs" />
+    <Compile Include="Assets\Debug\Debug_Direction.cs" />
     <Compile Include="Assets\SGOAP\Scripts\Common\Animation\SetAnimatorPropertyFloat.cs" />
     <Compile Include="Assets\SGOAP\Scripts\Basic\BasicAction.cs" />
     <Compile Include="Assets\SGOAP\Examples\WoodCutter\Scripts\FindAxe.cs" />
@@ -185,14 +191,10 @@
     <Compile Include="Assets\SGOAP\Examples\WoodCutter\Scripts\GoToShop.cs" />
     <Compile Include="Assets\SGOAP\Scripts\Core\IContext.cs" />
     <Compile Include="Assets\SGOAP\Scripts\Common\Actions\TimedAction.cs" />
+    <Compile Include="Assets\AI_Player\I_IdleState.cs" />
     <Compile Include="Assets\SGOAP\Examples\Combat\Scripts\Actions\PickUp.cs" />
     <Compile Include="Assets\SGOAP\Shared\SwingAnimationBehaviour.cs" />
-    <Compile Include="Assets\AI_Player\I_State.cs" />
-    <Compile Include="Assets\AI_Player\I_IdleState.cs" />
-    <Compile Include="Assets\AI_Player\FSM.cs" />
-    <Compile Include="Assets\VisionScan.cs" />
-    <Compile Include="Assets\Bullet.cs" />
-    <Compile Include="Assets\Launch.cs" />
+    <Compile Include="Assets\LowGravity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\SGOAP\Documentation\README.txt" />

@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class IdleState : I_State
 {
+    //float time = 0;
     private FSM manager;
     private Parameter parameter;
     private NavMeshAgent agent;
@@ -42,6 +43,7 @@ public class State_Patrol : I_State
     private Parameter parameter;
     private NavMeshAgent agent;
     private VisionScan visualScan;
+    private LineRenderer line;
 
     public State_Patrol(FSM manager)
     {
@@ -49,6 +51,7 @@ public class State_Patrol : I_State
         this.parameter = manager.parameter;
         this.agent = manager.agent;
         this.visualScan = manager.visualScan;
+        this.line = manager.line;
     }
 
 
@@ -77,6 +80,11 @@ public class State_Patrol : I_State
         {
             agent.Stop();
             manager.transform.LookAt(visualScan.CanSeeTarget().transform.position);
+
+            Vector3 target = visualScan.CanSeeTarget().transform.position;
+            line.SetPosition(0, agent.gameObject.transform.localPosition);
+            line.SetPosition(1, target);
+
             manager.TransitionState(StateType.Attack);
         }
 
@@ -93,11 +101,15 @@ public class State_Patrol : I_State
 
 public class State_Attack:I_State
 {
+    float time;
     private FSM manager;
     private Parameter parameter;
     private NavMeshAgent agent;
     private VisionScan visualScan;
     private Bullet bullet;
+    private LineRenderer line;
+
+    BoxCollider boxCollide;
 
     public State_Attack(FSM manager)
     {
@@ -106,17 +118,52 @@ public class State_Attack:I_State
         this.agent = manager.agent;
         this.visualScan = manager.visualScan;
         this.bullet = manager.bullet;
+        this.boxCollide = manager.boxCollider;
+        this.line = manager.line;
     }
 
     public void OnEnter()
     {
-
+        time = 0;
     }
 
     public void OnUpdate()
     {
-        bullet.SpawnBullet(agent.transform.localPosition);
-        Debug.Log("Foward: " + agent.transform.localPosition);
+        
+        time = Time.deltaTime+time;
+        if (time >= 1)
+        {
+            //Find Target
+            if (visualScan.CanSeeTarget() != null)
+            {
+                int num = Random.RandomRange(0, 10);
+                //Launch Ray and random behiour
+                if (num % 2 == 0)
+                {
+                    Ray ray = new Ray(agent.gameObject.transform.localPosition, agent.gameObject.transform.forward);
+                     RaycastHit hit;
+                     bool res = Physics.Raycast(ray, out hit);
+                     if (res == true)
+                     {
+                        //hit.collider
+                        Debug.Log(hit.collider);
+
+                         //Lose Point
+                         PlayerState targetPS = hit.collider.GetComponent<PlayerState>();
+                         targetPS.UpdateScore(-5);
+                      }
+                }
+                
+
+
+                time = 0;
+            }
+            else
+            {
+                manager.TransitionState(StateType.Patrol);
+            }
+        }
+        
     }
 
     public void OnExit()

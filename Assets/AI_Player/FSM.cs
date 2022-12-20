@@ -22,6 +22,8 @@ public class FSM : MonoBehaviour
     public Parameter parameter;
     public NavMeshAgent agent;
     public Bullet bullet;
+    public BoxCollider boxCollider;
+    public LineRenderer line;
 
     //AI Vision Sensor
     public VisionScan visualScan;
@@ -34,6 +36,8 @@ public class FSM : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         visualScan = GetComponent<VisionScan>();
         bullet = GetComponent<Bullet>();
+        boxCollider = GetComponent<BoxCollider>();
+        line = GetComponent<LineRenderer>();
 
         states.Add(StateType.Idle, new IdleState(this));
         states.Add(StateType.Patrol, new State_Patrol(this));

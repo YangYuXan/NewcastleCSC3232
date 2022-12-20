@@ -28,63 +28,40 @@ public class RandomSpawn : MonoBehaviour
     {
         time += Time.deltaTime;
         count++;
+        Debug.Log(time);
 
         if (_spawnCandy == true)
         {
-            if (time >= 1.7)
+            if (time >= 5)
             {
-                if (count % 3 == 0)
-                {
-                    SpawnCandy();
-                }
-                
+                SpawnCandy();
+                SpawnBoom();
+                SpawnBuffer();
+                time = 0;
             }
+            
 
         }
-            if (_spawnBoom == true)
-            {
-                if (time >= 2)
-                {
-
-                    if (count % 3 == 0)
-                    {
-                        SpawnBoom();
-                    }
-                    
-                }
-            }
-
-            if (_spawnBuffer == true)
-            {
-                if (time >= 5)
-                {
-
-                    if (count % 5 == 0)
-                    {
-                        SpawnBuffer();
-                    }
-                    time = 0;
-                }
-            }
+        
 
     }
 
     void SpawnCandy()
     {
         Instantiate(candy);
-        candy.transform.position = new Vector3(Random.Range(-5, 5), 2, Random.Range(-5, 5));
+        candy.transform.position = new Vector3(Random.Range(-3, 3), 2, Random.Range(-5, 5));
     }
 
     void SpawnBoom()
     {
         Instantiate(boom);
-        boom.transform.position = new Vector3(Random.Range(-5, 5), 2, Random.Range(-5, 5));
+        boom.transform.position = new Vector3(Random.Range(-3, 3), 2, Random.Range(-5, 5));
     }
 
     void SpawnBuffer()
     {
         Instantiate(Buffer);
-        Buffer.transform.position = new Vector3(Random.Range(-5, 5), 2, Random.Range(-5, 5));
+        Buffer.transform.position = new Vector3(Random.Range(-3, 3), 2, Random.Range(-5, 5));
     }
 
 }

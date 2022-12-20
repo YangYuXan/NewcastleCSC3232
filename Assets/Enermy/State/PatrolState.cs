@@ -32,7 +32,6 @@ public class PatrolState : BaseState
             waitTimer += Time.deltaTime;
             if(waitTimer > 1)
             {
-                Debug.Log("enter");
                 if (wayPointIndex < enemy.path.waypoints.Count - 1)
                 {
 
