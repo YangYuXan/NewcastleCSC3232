@@ -31,7 +31,7 @@ public class RandomSpawn : MonoBehaviour
 
         if (_spawnCandy == true)
         {
-            if (time >= 1)
+            if (time >= 1.7)
             {
                 if (count % 3 == 0)
                 {
@@ -43,7 +43,7 @@ public class RandomSpawn : MonoBehaviour
         }
             if (_spawnBoom == true)
             {
-                if (time >= 1)
+                if (time >= 2)
                 {
 
                     if (count % 3 == 0)
@@ -56,7 +56,7 @@ public class RandomSpawn : MonoBehaviour
 
             if (_spawnBuffer == true)
             {
-                if (time >= 1)
+                if (time >= 5)
                 {
 
                     if (count % 5 == 0)

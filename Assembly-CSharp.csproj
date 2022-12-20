@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{7E9DF9C8-0F10-1792-D90A-5562E712173D}</ProjectGuid>
+    <ProjectGuid>{4F9F3514-7F1B-2AC7-EAE7-10EA5FBB311A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -67,6 +67,7 @@
     <Compile Include="Assets\SGOAP\Examples\Combat\Scripts\Components\LevelGenerator.cs" />
     <Compile Include="Assets\SGOAP\Scripts\Core\Evaluators\UsableEvaluator.cs" />
     <Compile Include="Assets\SGOAP\Scripts\Core\Identity.cs" />
+    <Compile Include="Assets\Physical.cs" />
     <Compile Include="Assets\SGOAP\Shared\ThirdParty\FPSDisplay.cs" />
     <Compile Include="Assets\SGOAP\Examples\Combat\Scripts\AnimationMessages.cs" />
     <Compile Include="Assets\SGOAP\Examples\Combat\Scripts\Components\Grenade.cs" />
@@ -83,10 +84,12 @@
     <Compile Include="Assets\SGOAP\Scripts\Systems\Sensors\RangeSensor.cs" />
     <Compile Include="Assets\SGOAP\Examples\Combat\Scripts\HitCollider.cs" />
     <Compile Include="Assets\SGOAP\Scripts\Basic\AgentBasicData.cs" />
+    <Compile Include="Assets\PrsionWall.cs" />
     <Compile Include="Assets\SGOAP\Examples\Combat\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\SGOAP\Scripts\Common\MinMax\MinMaxAttribute.cs" />
     <Compile Include="Assets\SGOAP\Scripts\Common\Properties\BoolProperty.cs" />
     <Compile Include="Assets\SGOAP\Scripts\Common\Properties\PropertyValue.cs" />
+    <Compile Include="Assets\SearchPoint.cs" />
     <Compile Include="Assets\SGOAP\Scripts\Services\DataBind\IDataBind.cs" />
     <Compile Include="Assets\SGOAP\Scripts\Basic\Inventory.cs" />
     <Compile Include="Assets\SGOAP\Examples\CoroutineExample\CoroutineActionExample.cs" />
@@ -117,6 +120,7 @@
     <Compile Include="Assets\SGOAP\Examples\Combat\Scripts\AnimationController.cs" />
     <Compile Include="Assets\SGOAP\Examples\Combat\Scripts\Components\Item.cs" />
     <Compile Include="Assets\SGOAP\Shared\ObjectManager.cs" />
+    <Compile Include="Assets\PhsycialBall.cs" />
     <Compile Include="Assets\SGOAP\Scripts\Core\States\WorldState.cs" />
     <Compile Include="Assets\Enermy\Path.cs" />
     <Compile Include="Assets\SGOAP\Scripts\Core\Models\EChangeOperator.cs" />
@@ -130,6 +134,7 @@
     <Compile Include="Assets\SGOAP\Examples\Combat\Scripts\ColliderResult.cs" />
     <Compile Include="Assets\SGOAP\Scripts\Core\Utils\GOAPUtils.cs" />
     <Compile Include="Assets\SGOAP\Examples\Combat\Scripts\Actions\Roam.cs" />
+    <Compile Include="Assets\UI_Score.cs" />
     <Compile Include="Assets\SGOAP\Scripts\Core\EffectAndValueAttribute.cs" />
     <Compile Include="Assets\SGOAP\Examples\Combat\Scripts\CostEvaluators\DistanceCostEvaluator.cs" />
     <Compile Include="Assets\SGOAP\Examples\Combat\Scripts\AnimationDisableBehaviour.cs" />
@@ -182,10 +187,12 @@
     <Compile Include="Assets\SGOAP\Scripts\Common\Actions\TimedAction.cs" />
     <Compile Include="Assets\SGOAP\Examples\Combat\Scripts\Actions\PickUp.cs" />
     <Compile Include="Assets\SGOAP\Shared\SwingAnimationBehaviour.cs" />
-    <Compile Include="Assets\UI_Score.cs" />
-    <Compile Include="Assets\PrsionWall.cs" />
-    <Compile Include="Assets\PhsycialBall.cs" />
-    <Compile Include="Assets\SearchPoint.cs" />
+    <Compile Include="Assets\AI_Player\I_State.cs" />
+    <Compile Include="Assets\AI_Player\I_IdleState.cs" />
+    <Compile Include="Assets\AI_Player\FSM.cs" />
+    <Compile Include="Assets\VisionScan.cs" />
+    <Compile Include="Assets\Bullet.cs" />
+    <Compile Include="Assets\Launch.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\SGOAP\Documentation\README.txt" />
